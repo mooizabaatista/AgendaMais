@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaMais.Domain", "AgendaMais.Domain\AgendaMais.Domain.csproj", "{02C5469D-D108-4FBD-B972-8D9B1B0DF520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaMais.Infra", "AgendaMais.Infra\AgendaMais.Infra.csproj", "{EDE35D72-B796-4662-A0D8-2DF308DD42FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02C5469D-D108-4FBD-B972-8D9B1B0DF520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C5469D-D108-4FBD-B972-8D9B1B0DF520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C5469D-D108-4FBD-B972-8D9B1B0DF520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C5469D-D108-4FBD-B972-8D9B1B0DF520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
