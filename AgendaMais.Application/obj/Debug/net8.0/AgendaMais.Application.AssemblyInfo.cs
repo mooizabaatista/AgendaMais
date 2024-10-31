@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgendaMais.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+076c0b30a1f7cee7abc1f8ade1ecd077425d14aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c31f293be5c6293dba9e11004e860831fd437dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgendaMais.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgendaMais.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

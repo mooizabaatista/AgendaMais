@@ -194,6 +194,20 @@ public class AgendamentoService : IAgendamentoService
     {
         try
         {
+            var servicoValidation = new AgendamentoValidation();
+
+            var validationResult = servicoValidation.Validate(agendamentoDto);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                    _errors.Add(error.ErrorMessage);
+    
+                _response.EstaValido = false;
+                _response.Resultado = _errors;
+                return _response;
+            }
+            
             // Localizar o agendamento para edição
             var agendamentoDtoToEdit = await _agendamentoRepository.GetByIdAsync(id);
 

@@ -1,9 +1,11 @@
 ﻿using AgendaMais.Application.Dtos.Servico;
 using AgendaMais.Application.Dtos.Response;
 using AgendaMais.Application.Interfaces;
+using AgendaMais.Application.Validations;
 using AgendaMais.Domain.Entities;
 using AgendaMais.Infra.Interfaces;
 using AutoMapper;
+// ReSharper disable All
 
 namespace AgendaMais.Application.Services;
 
@@ -13,6 +15,7 @@ public class ServicoService : IServicoService
     private readonly IEstabelecimentoRepository _estabelecimentoRepository;
     private readonly IMapper _mapper;
     private readonly ResponseDto _response;
+    private readonly List<string> _errors;
 
     public ServicoService(IServicoRepository servicoRepository, IMapper mapper,
         IEstabelecimentoRepository estabelecimentoRepository)
@@ -21,6 +24,7 @@ public class ServicoService : IServicoService
         _mapper = mapper;
         _estabelecimentoRepository = estabelecimentoRepository;
         _response = new ResponseDto();
+        _errors = new List<string>();
     }
 
     public async Task<ResponseDto> Get()
@@ -71,6 +75,21 @@ public class ServicoService : IServicoService
     {
         try
         {
+            var servicoValidation = new ServicoValidation();
+
+            var validationResult = servicoValidation.Validate(entity);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                    _errors.Add(error.ErrorMessage);
+    
+                _response.EstaValido = false;
+                _response.Resultado = _errors;
+                return _response;
+            }
+            
+            
             var servico = _mapper.Map<Servico>(entity);
 
             var estabelecimento = await _estabelecimentoRepository.GetByIdAsync(entity.EstabelecimentoId);
@@ -108,6 +127,20 @@ public class ServicoService : IServicoService
     {
         try
         {
+            var servicoValidation = new ServicoValidation();
+
+            var validationResult = servicoValidation.Validate(entity);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                    _errors.Add(error.ErrorMessage);
+    
+                _response.EstaValido = false;
+                _response.Resultado = _errors;
+                return _response;
+            }
+            
             var servico = await _servicoRepository.GetByIdAsync(id);
 
             if (servico == null)

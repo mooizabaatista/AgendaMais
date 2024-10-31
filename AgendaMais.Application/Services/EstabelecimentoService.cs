@@ -114,6 +114,20 @@ public class EstabelecimentoService : IEstabelecimentoService
     {
         try
         {
+            var estabelecimentoValidation = new EstabelecimentoValidation();
+
+            var validationResult = estabelecimentoValidation.Validate(entity);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                    _errors.Add(error.ErrorMessage);
+    
+                _response.EstaValido = false;
+                _response.Resultado = _errors;
+                return _response;
+            }
+            
             var estabelecimento = await _estabelecimentoRepository.GetByIdAsync(id);
 
             if (estabelecimento == null)
