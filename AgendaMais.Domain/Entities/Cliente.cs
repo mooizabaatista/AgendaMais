@@ -7,8 +7,8 @@ public class Cliente
     public string Telefone { get; set; } = "";
     public string Email { get; set; } = "";
     public int EstabelecimentoId { get; set; }
-    public Estabelecimento Estabelecimento { get; set; } = new();
+    public Estabelecimento? Estabelecimento { get; set; } 
 
     // Lista de agendamentos relacionados ao cliente
-    public List<Agendamento> Agendamentos { get; set; } = new();
+    public List<Agendamento>? Agendamentos { get; set; } 
 }

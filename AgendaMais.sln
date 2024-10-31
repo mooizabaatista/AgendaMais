@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaMais.Domain", "Agenda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaMais.Infra", "AgendaMais.Infra\AgendaMais.Infra.csproj", "{EDE35D72-B796-4662-A0D8-2DF308DD42FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaMais.Api", "AgendaMais.Api\AgendaMais.Api.csproj", "{1A1D856F-F615-445A-802B-7BE6DD2C60F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaMais.Application", "AgendaMais.Application\AgendaMais.Application.csproj", "{8EA40EAB-DCDF-4E9C-BE4B-B8D44700DE20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDE35D72-B796-4662-A0D8-2DF308DD42FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1D856F-F615-445A-802B-7BE6DD2C60F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1D856F-F615-445A-802B-7BE6DD2C60F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1D856F-F615-445A-802B-7BE6DD2C60F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1D856F-F615-445A-802B-7BE6DD2C60F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EA40EAB-DCDF-4E9C-BE4B-B8D44700DE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA40EAB-DCDF-4E9C-BE4B-B8D44700DE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA40EAB-DCDF-4E9C-BE4B-B8D44700DE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA40EAB-DCDF-4E9C-BE4B-B8D44700DE20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

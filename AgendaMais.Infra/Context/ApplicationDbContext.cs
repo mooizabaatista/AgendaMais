@@ -50,8 +50,5 @@ public class ApplicationDbContext : DbContext
             .HasForeignKey(x => x.EstabelecimentoId);
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite("Data Source=AgendaMais.Infra.db");
-    }
+    
 }

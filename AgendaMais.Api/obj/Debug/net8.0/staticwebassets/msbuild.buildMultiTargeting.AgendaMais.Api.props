@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AgendaMais.Api.props" />
+</Project>

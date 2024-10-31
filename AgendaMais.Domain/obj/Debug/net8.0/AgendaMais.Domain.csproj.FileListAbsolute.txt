@@ -1,0 +1,12 @@
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\bin\Debug\net8.0\AgendaMais.Domain.deps.json
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\bin\Debug\net8.0\AgendaMais.Domain.dll
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\bin\Debug\net8.0\AgendaMais.Domain.pdb
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.AssemblyInfoInputs.cache
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.AssemblyInfo.cs
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.csproj.CoreCompileInputs.cache
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.sourcelink.json
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.dll
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\refint\AgendaMais.Domain.dll
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\AgendaMais.Domain.pdb
+C:\Users\p-mbsilva\RiderProjects\AgendaMais\AgendaMais.Domain\obj\Debug\net8.0\ref\AgendaMais.Domain.dll
