@@ -1,9 +1,11 @@
 ﻿using AgendaMais.Application.Dtos.Cliente;
 using AgendaMais.Application.Dtos.Response;
 using AgendaMais.Application.Interfaces;
+using AgendaMais.Application.Validations;
 using AgendaMais.Domain.Entities;
 using AgendaMais.Infra.Interfaces;
 using AutoMapper;
+// ReSharper disable All
 
 namespace AgendaMais.Application.Services;
 
@@ -13,6 +15,7 @@ public class ClienteService : IClienteService
     private readonly IEstabelecimentoRepository _estabelecimentoRepository;
     private readonly IMapper _mapper;
     private readonly ResponseDto _response;
+    private readonly List<string> _errors;
 
     public ClienteService(IClienteRepository clienteRepository, IMapper mapper,
         IEstabelecimentoRepository estabelecimentoRepository)
@@ -21,6 +24,7 @@ public class ClienteService : IClienteService
         _mapper = mapper;
         _estabelecimentoRepository = estabelecimentoRepository;
         _response = new ResponseDto();
+        _errors = new List<string>();
     }
 
     public async Task<ResponseDto> Get()
@@ -71,6 +75,20 @@ public class ClienteService : IClienteService
     {
         try
         {
+            var clienteValidation = new ClienteValidation();
+
+            var validationResult = clienteValidation.Validate(entity);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                    _errors.Add(error.ErrorMessage);
+    
+                _response.EstaValido = false;
+                _response.Resultado = _errors;
+                return _response;
+            }
+            
             var cliente = _mapper.Map<Cliente>(entity);
 
             var estabelecimento = await _estabelecimentoRepository.GetByIdAsync(entity.EstabelecimentoId);
@@ -108,6 +126,20 @@ public class ClienteService : IClienteService
     {
         try
         {
+            var clienteValidation = new ClienteValidation();
+
+            var validationResult = clienteValidation.Validate(entity);
+
+            if (!validationResult.IsValid)
+            {
+                foreach (var error in validationResult.Errors)
+                    _errors.Add(error.ErrorMessage);
+    
+                _response.EstaValido = false;
+                _response.Resultado = _errors;
+                return _response;
+            }
+            
             var cliente = await _clienteRepository.GetByIdAsync(id);
 
             if (cliente == null)
