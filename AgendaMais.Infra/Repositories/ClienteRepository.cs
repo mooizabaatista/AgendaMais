@@ -14,12 +14,13 @@ public class ClienteRepository : IClienteRepository
         _context = context;
     }
 
-    public async Task<List<Cliente>> GetAllAsync()
+    public async Task<List<Cliente>> GetAllAsync(int estabelecimentoId)
     {
        return await _context
            .Clientes
            .Include(x => x.Estabelecimento)
            .AsNoTracking()
+           .Where(x => x.EstabelecimentoId == estabelecimentoId)
            .ToListAsync();
     }
 

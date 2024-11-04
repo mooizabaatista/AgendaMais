@@ -7,7 +7,7 @@ namespace AgendaMais.Infra.Interfaces;
 
 public interface IAgendamentoRepository
 {
-    Task<List<Agendamento>> GetAllAsync();
+    Task<List<Agendamento>> GetAllAsync(int estabelecimentoId);
     Task<Agendamento?> GetByIdAsync(int id);
     Task <Agendamento?>AddAsync(Agendamento entity);
     Task<Agendamento?> UpdateAsync(int id, Agendamento entity);

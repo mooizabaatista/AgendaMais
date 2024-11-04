@@ -19,12 +19,12 @@ namespace AgendaMais.Api.Controllers
             _clienteService = clienteService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [HttpGet("GetAll/{estabelecimentoId:int}")]
+        public async Task<IActionResult> GetAll(int estabelecimentoId)
         {
             try
             {
-                var result = await _clienteService.Get();
+                var result = await _clienteService.GetAll(estabelecimentoId);
 
                 if (result.EstaValido)
                     return Ok(result);

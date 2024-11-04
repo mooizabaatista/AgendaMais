@@ -27,11 +27,11 @@ public class ClienteService : IClienteService
         _errors = new List<string>();
     }
 
-    public async Task<ResponseDto> Get()
+    public async Task<ResponseDto> GetAll(int estabelecimentoId)
     {
         try
         {
-            var clientesEntity = await _clienteRepository.GetAllAsync();
+            var clientesEntity = await _clienteRepository.GetAllAsync(estabelecimentoId);
             var clientesDto = _mapper.Map<List<ClienteDto>>(clientesEntity);
 
             _response.Resultado = _mapper.Map<List<ClienteDto>>(clientesEntity);

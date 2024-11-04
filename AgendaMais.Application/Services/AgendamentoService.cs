@@ -34,12 +34,12 @@ public class AgendamentoService : IAgendamentoService
         _errors = new List<string>();
     }
 
-    public async Task<ResponseDto> Get()
+    public async Task<ResponseDto> GetAll(int estabelecimentoId)
     {
         try
         {
             var agendamentosDto = new List<AgendamentoDto>();
-            var agendamentos = await _agendamentoRepository.GetAllAsync();
+            var agendamentos = await _agendamentoRepository.GetAllAsync(estabelecimentoId);
 
             if (agendamentos.Count > 0)
             {

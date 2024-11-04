@@ -5,7 +5,7 @@ namespace AgendaMais.Application.Interfaces;
 
 public interface IAgendamentoService
 {
-    Task<ResponseDto> Get();
+    Task<ResponseDto> GetAll(int estabelecimentoId);
     Task<ResponseDto> Get(int id);
     Task<ResponseDto> AddAsync(AgendamentoCommandDto agendamentoDto);
     Task<ResponseDto> UpdateAsync(int id, AgendamentoCommandDto agendamentoDto);

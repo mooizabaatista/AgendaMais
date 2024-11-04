@@ -14,13 +14,14 @@ public class AgendamentoRepository : IAgendamentoRepository
         _context = context;
     }
 
-    public async Task<List<Agendamento>> GetAllAsync()
+    public async Task<List<Agendamento>> GetAllAsync(int estabelecimentoId)
     {
        return await _context
            .Agendamentos
            .AsNoTracking()
            .Include(x => x.Cliente)
            .ThenInclude(x => x.Estabelecimento)
+           .Where(x =>x.Cliente.EstabelecimentoId == estabelecimentoId)
            .ToListAsync();
     }
 
